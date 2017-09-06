@@ -1,7 +1,7 @@
 # ScreenResolution
 Show, Update ScreenResolution with powershell or cmd.
 
-The key feature is to allow a different screen resolution for each user (depending on their usage). The saved screen resolution will be automatically restore at logon time.
+**The key feature allows a different screen resolution for each user (depending on their usage). The user's saved screen resolution will be automatically restore at logon time.**
 
 
 Features:
