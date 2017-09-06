@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UpdateScreenResolution", "UpdateScreenResolution\UpdateScreenResolution.csproj", "{F65C8867-E846-48E0-88A4-EB71D03B9D23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScreenManagement", "ScreenManagement\ScreenManagement.csproj", "{C975C1AE-6343-4716-B656-6DBF3841933E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowershellScreenManagement", "PowershellScreenManagement\PowershellScreenManagement.csproj", "{8D3DB5F5-C1A1-42F7-9F81-DFBBE635BCED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F65C8867-E846-48E0-88A4-EB71D03B9D23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F65C8867-E846-48E0-88A4-EB71D03B9D23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F65C8867-E846-48E0-88A4-EB71D03B9D23}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F65C8867-E846-48E0-88A4-EB71D03B9D23}.Debug|x86.Build.0 = Debug|Any CPU
+		{F65C8867-E846-48E0-88A4-EB71D03B9D23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F65C8867-E846-48E0-88A4-EB71D03B9D23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F65C8867-E846-48E0-88A4-EB71D03B9D23}.Release|x86.ActiveCfg = Release|Any CPU
+		{F65C8867-E846-48E0-88A4-EB71D03B9D23}.Release|x86.Build.0 = Release|Any CPU
+		{C975C1AE-6343-4716-B656-6DBF3841933E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C975C1AE-6343-4716-B656-6DBF3841933E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C975C1AE-6343-4716-B656-6DBF3841933E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C975C1AE-6343-4716-B656-6DBF3841933E}.Debug|x86.Build.0 = Debug|Any CPU
+		{C975C1AE-6343-4716-B656-6DBF3841933E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C975C1AE-6343-4716-B656-6DBF3841933E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C975C1AE-6343-4716-B656-6DBF3841933E}.Release|x86.ActiveCfg = Release|Any CPU
+		{C975C1AE-6343-4716-B656-6DBF3841933E}.Release|x86.Build.0 = Release|Any CPU
+		{8D3DB5F5-C1A1-42F7-9F81-DFBBE635BCED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D3DB5F5-C1A1-42F7-9F81-DFBBE635BCED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D3DB5F5-C1A1-42F7-9F81-DFBBE635BCED}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8D3DB5F5-C1A1-42F7-9F81-DFBBE635BCED}.Debug|x86.Build.0 = Debug|Any CPU
+		{8D3DB5F5-C1A1-42F7-9F81-DFBBE635BCED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D3DB5F5-C1A1-42F7-9F81-DFBBE635BCED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D3DB5F5-C1A1-42F7-9F81-DFBBE635BCED}.Release|x86.ActiveCfg = Release|Any CPU
+		{8D3DB5F5-C1A1-42F7-9F81-DFBBE635BCED}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9E956CCB-0A0A-4FC7-8F14-0479C8DF65A3}
+	EndGlobalSection
+EndGlobal
