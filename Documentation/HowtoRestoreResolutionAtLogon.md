@@ -1,4 +1,4 @@
-How to restore the resolution at logon?
+# How to restore the resolution at logon?
 
  1. Download the [Executable Binary here](https://github.com/qxsch/ScreenResolution/raw/master/Binary/Executable.zip)
  2. Unpack the zip file into a dedicated folder
