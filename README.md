@@ -13,7 +13,8 @@ Features:
     * automatically restore the screen resolution at logon
     * save screen resolution to different backup profiles and restore them on demand
 
+Use deployPowershellModuleToSystem.ps1 to install the powershell module.
 ![Powershell Screen Management](Documentation/PowershellScreenManagement.png)
 
-
+Use install.ps1 to install the exe.
 ![UpdateScreenResolution.exe](Documentation/UpdateScreenResolutionExe.png)
