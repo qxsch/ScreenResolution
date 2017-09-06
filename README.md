@@ -1,5 +1,5 @@
 # ScreenResolution
-Show, Update ScreenResolution on the powershell or cmd.
+Show, Update ScreenResolution with powershell or cmd.
 
 Features:
   * Powershell Module to:
