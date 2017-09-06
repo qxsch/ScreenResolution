@@ -4,7 +4,7 @@ Show, Update ScreenResolution with powershell or cmd.
 **The key feature allows a different screen resolution for each user (depending on their usage). The user's saved screen resolution will be automatically restored at logon time.**
 
 Download:
- * Download the [Executable Binary here](https://github.com/qxsch/ScreenResolution/raw/master/Binary/Executable.zip)
+ * Download the [Executable Binary here](https://github.com/qxsch/ScreenResolution/raw/master/Binary/Executable.zip) and also see [How to Restore Resolution At Logon](https://github.com/qxsch/ScreenResolution/blob/master/Documentation/HowtoRestoreResolutionAtLogon.md)
  * Download the [Powershell Module here](https://github.com/qxsch/ScreenResolution/raw/master/Binary/PowershellModule.zip)
 
 Features:
