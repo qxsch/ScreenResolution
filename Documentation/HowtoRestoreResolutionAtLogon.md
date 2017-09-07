@@ -1,4 +1,4 @@
-# How to restore the resolution at logon?
+# How to automatically restore the resolution at logon?
 
  1. Download [the installer](https://github.com/qxsch/ScreenResolution/raw/master/Binary/ScreenResolutionSetup.msi)
  2. Install at least the application
@@ -9,7 +9,7 @@
  
  
 
-# How to disable resolution at logon?
+# How to disable automatic resolution restore at logon?
  1. start cmd (by clicking on the start menu and then type ```cmd```)
  2. go to the directory by typing: ```cd "C:\Program Files\QXSScreenResolution\"```
  3. enter the following to activate restore at logon:  ```.\UpdateScreenResolution.exe disable-restore-at-logon```
