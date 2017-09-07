@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" xmlns:netfx="http://schemas.microsoft.com/wix/NetFxExtension">
+	<Product Id="*" Name="QXS ScreenResolution" Language="1033" Version="1.0.0.0" Manufacturer="QXS.CH" UpgradeCode="c15fac3a-29e9-4afb-b399-03bf3127a0ab">
+		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" InstallPrivileges="elevated" />
+
+		<MajorUpgrade DowngradeErrorMessage="A newer version of ScreenResolution is already installed." />
+		<MediaTemplate EmbedCab="yes" />
+
+		<Feature Id="ApplicationFeature" Title="Application" Level="1" ConfigurableDirectory="INSTALLDIR" Description="Installs the UpdateScreenResolution.exe file to set and get screen resolution.">
+			<ComponentRef Id="ApplicationFiles" />
+      <!--<ComponentRef Id="PowershellFiles" />-->
+		</Feature>
+		<Feature Id="PowerShellModuleFeature" Title="Powershell Module" Level="1" ConfigurableDirectory="INSTALLDIR" Description="Installs the PowershellScreenResolution module to set and get screen resolution in Powershell (>=3.0).">
+			<ComponentRef Id="PowershellFiles" />
+      <!--<ComponentRef Id="PowershellFiles" />-->
+		</Feature>
+    
+    <WixVariable Id="WixUILicenseRtf" Value="$(var.ProjectDir)\GPL3.rtf" />
+    <Property Id="WIXUI_INSTALLDIR" Value="INSTALLDIR" ></Property>
+    <UIRef Id="WixUI_FeatureTree"/>
+
+    <PropertyRef Id="WIX_IS_NETFRAMEWORK_40_OR_LATER_INSTALLED"/>
+    <Condition Message="This application requires .NET Framework 4.0. Please install the .NET Framework then run this installer again.">
+      <![CDATA[Installed OR WIX_IS_NETFRAMEWORK_40_OR_LATER_INSTALLED]]>
+    </Condition>
+	</Product>
+
+	<Fragment>
+      <Directory Id="TARGETDIR" Name="SourceDir">
+        <Directory Id="ProgramFilesFolder">
+          <Directory Id="INSTALLDIR" Name="QXSScreenResolution">
+            <Component Id="ApplicationFiles" Guid="4C1C221C-C96D-4C9C-A0F3-4678B8F8DCCB">
+              <File Id="AFUpdateScreenResolution.exe" Source="$(var.UpdateScreenResolution.TargetDir)\UpdateScreenResolution.exe" Name="UpdateScreenResolution.exe" />
+              <File Id="AFUpdateScreenResolution.exe.config" Source="$(var.UpdateScreenResolution.TargetDir)\UpdateScreenResolution.exe.config" Name="UpdateScreenResolution.exe.config" />
+              <File Id="AFMono.Options.dll" Source="$(var.UpdateScreenResolution.TargetDir)\Mono.Options.dll" Name="Mono.Options.dll" />
+              <File Id="AFScreenManagement.dll" Source="$(var.UpdateScreenResolution.TargetDir)\ScreenManagement.dll" Name="ScreenManagement.dll" />
+            </Component>
+          </Directory>
+        </Directory>
+        <Directory Id="SystemFolder">
+          <Directory Id="WindowsPowerShell" Name="WindowsPowerShell">
+            <Directory Id="WindowsPowerShellv1.0" Name="v1.0">
+              <Directory Id="WindowsPowerShellv1.0Modules" Name="Modules">
+                <Directory Id="WindowsPowerShellv1PowershellScreenManagement" Name="PowershellScreenManagement">
+                  <Component Id="PowershellFiles" Guid="4C11455F-B03C-4747-AD45-A15831EFF29C">
+                    <File Id="PFPowershellScreenManagement.dll" Source="$(var.PowershellScreenManagement.TargetDir)\PowershellScreenManagement.dll" Name="PowershellScreenManagement.dll" />
+                    <File Id="PFPowershellScreenManagement.psd1" Source="$(var.PowershellScreenManagement.TargetDir)\PowershellScreenManagement.psd1" Name="PowershellScreenManagement.psd1" />
+                    <File Id="PFScreenManagement.dll" Source="$(var.PowershellScreenManagement.TargetDir)\ScreenManagement.dll" Name="ScreenManagement.dll" />
+                    <RemoveFolder Id="WindowsPowerShellv1PowershellScreenManagement" On="both" />
+                  </Component>
+                </Directory>
+              </Directory>
+            </Directory>
+          </Directory>
+        </Directory>
+      </Directory>
+	</Fragment>
+</Wix>
