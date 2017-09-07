@@ -8,3 +8,9 @@
  6. enter the following to activate restore at logon:  ```.\UpdateScreenResolution.exe enable-restore-at-logon```
  
  
+
+# How to disable resolution at logon?
+ 1. start cmd (by clicking on the start menu and then type ```cmd```)
+ 2. go to the directory by typing: ```cd "C:\Program Files\QXSScreenResolution\"```
+ 3. enter the following to activate restore at logon:  ```.\UpdateScreenResolution.exe disable-restore-at-logon```
+
