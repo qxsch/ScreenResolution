@@ -1,7 +1,9 @@
 # How to automatically restore the resolution at logon?
 
+Prerequisites: powershell >= 3.0 and .Net Framework >= 4.0
+
  1. Download [the installer](https://github.com/qxsch/ScreenResolution/raw/master/Binary/ScreenResolutionSetup.msi)
- 2. Install at least the application
+ 2. Install at least the *application* feature
  3. start cmd (by clicking on the start menu and then type ```cmd```)
  4. go to the directory by typing: ```cd "C:\Program Files\QXSScreenResolution\"```
  5. enter the following to save the current resolution: ```.\UpdateScreenResolution.exe save-resolution```
