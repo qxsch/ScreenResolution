@@ -23,7 +23,7 @@ Problem: The Screen resolution gets adjusted on Windows >= 8  about 11 seconds a
 
 Solution: Is described here https://www.eightforums.com/tutorials/37373-startup-delay-time-reduce-windows-8-a.html
 
-**You have to tdo this for every user, that you want to have a faster resolution change.**
+**You have to to do this for every user, that you want to have a faster resolution change.**
 
  1. Download the [registry file](https://cdn.rawgit.com/qxsch/ScreenResolution/021f7b06/Binary/Windows_8_No_Startup_Delay.reg)   (click here to get the [raw version](https://raw.githubusercontent.com/qxsch/ScreenResolution/master/Binary/Windows_8_No_Startup_Delay.reg))
  2. Run the registry file by double clicking
