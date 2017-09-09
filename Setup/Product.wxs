@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" xmlns:netfx="http://schemas.microsoft.com/wix/NetFxExtension">
-	<Product Id="*" Name="QXS ScreenResolution" Language="1033" Version="1.0.0.0" Manufacturer="QXS.CH" UpgradeCode="c15fac3a-29e9-4afb-b399-03bf3127a0ab">
-		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" InstallPrivileges="elevated" />
+	<Product Id="*" Name="QXS ScreenResolution" Language="1033" Version="1.0.1.0" Manufacturer="QXS.CH" UpgradeCode="c15fac3a-29e9-4afb-b399-03bf3127a0ab">
+		<Package InstallerVersion="201" Compressed="yes" InstallScope="perMachine" InstallPrivileges="elevated" />
 
 		<MajorUpgrade DowngradeErrorMessage="A newer version of ScreenResolution is already installed." />
 		<MediaTemplate EmbedCab="yes" />
@@ -37,7 +37,25 @@
             </Component>
           </Directory>
         </Directory>
-        <Directory Id="SystemFolder">
+        <Directory Id="WindowsFolder">
+          <Directory Id="Sys32" Name="System32">
+            <Directory Id="Sys32WindowsPowerShell" Name="WindowsPowerShell">
+              <Directory Id="Sys32WindowsPowerShellv1" Name="v1.0">
+                <Directory Id="Sys32WindowsPowerShellv1Modules" Name="Modules">
+                  <Directory Id="Sys32WindowsPowerShellv1PowershellScreenManagement" Name="PowershellScreenManagement">
+                    <Component Id="PowershellFiles" Guid="4C11455F-B03C-4747-AD45-A15831EFF29C">
+                      <File Id="PFPowershellScreenManagement.dll" Source="$(var.PowershellScreenManagement.TargetDir)\PowershellScreenManagement.dll" Name="PowershellScreenManagement.dll" />
+                      <File Id="PFPowershellScreenManagement.psd1" Source="$(var.PowershellScreenManagement.TargetDir)\PowershellScreenManagement.psd1" Name="PowershellScreenManagement.psd1" />
+                      <File Id="PFScreenManagement.dll" Source="$(var.PowershellScreenManagement.TargetDir)\ScreenManagement.dll" Name="ScreenManagement.dll" />
+                      <RemoveFolder Id="WindowsPowerShellv1PowershellScreenManagement" On="both" />
+                    </Component>
+                  </Directory>
+                </Directory>
+              </Directory>
+            </Directory>
+          </Directory>
+        </Directory>
+        <!--<Directory Id="SystemFolder">
           <Directory Id="WindowsPowerShell" Name="WindowsPowerShell">
             <Directory Id="WindowsPowerShellv1.0" Name="v1.0">
               <Directory Id="WindowsPowerShellv1.0Modules" Name="Modules">
@@ -52,7 +70,7 @@
               </Directory>
             </Directory>
           </Directory>
-        </Directory>
+        </Directory>-->
       </Directory>
 	</Fragment>
 </Wix>
